@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "Yeve",
+    "slug": "yeve-app",
+    "owner": "duruelvis",
+    "version": "1.0.4",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "https",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yevemobile",
+      "buildNumber": "1.0.0",
+      "associatedDomains": ["applinks:yeve.co.uk"]
+    },
+    "android": {
+      "versionCode": 4,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "softwareKeyboardLayoutMode": "pan",
+      "package": "com.yevemobile",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "*.yeve.co.uk",
+              "pathPrefix": "/stripe-status"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4c29c918-fe33-4be8-bb3f-abd45b24e96b"
+      }
+    },
+    "plugins": ["./plugins/withAndroidVerifiedLinksWorkaround"]
+  }
+}
